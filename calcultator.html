@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+First number<br>
+<input type='text' id='n1'>
+<br>Second number<br>
+<input type='text' id='n2'>
+<br>result<br>
+<input type='text' id='re' readonly>
+<p>
+<input type='button' value='add' onclick='add()'>
+<input type='button' value='sub' onclick='sub()'>
+<input type='button' value='mult' onclick='mult()'>
+<input type='button' value='div' onclick='div()'>
+</p>
+<script>
+function add(){
+num1=document.getElementById('n1').value;
+num2=document.getElementById('n2').value;
+res=Number(num1)+Number(num2);
+document.getElementById('re').value=res;
+}
+
+function sub(){
+num1=document.getElementById('n1').value;
+num2=document.getElementById('n2').value;
+res=Number(num1)-Number(num2);
+document.getElementById('re').value=res;
+}
+
+function mult(){
+num1=document.getElementById('n1').value;
+num2=document.getElementById('n2').value;
+res=Number(num1)*Number(num2);
+document.getElementById('re').value=res;
+}
+
+function div(){
+num1=document.getElementById('n1').value;
+num2=document.getElementById('n2').value;
+if(num2==0){
+alert('Error')
+document.getElementById('re').value='Error';
+}else{
+res=Number(num1)+Number(num2);
+document.getElementById('re').value=res;}
+}
+</script>
+</body>
+</html>
